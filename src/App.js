@@ -20,6 +20,14 @@ class App extends React.Component {
     const responseOmdb = await fetch(omdbUrl);
     const dataOmdb = await responseOmdb.json();
 
+    let inputValue = document.getElementById("search").value;
+    let arrInput = JSON.parse(localStorage.getItem("key")) || [];
+    arrInput.push(inputValue);
+    if (arrInput.length > 10) arrInput.shift();
+    localStorage.setItem("key", JSON.stringify(arrInput));
+
+    console.log(arrInput);
+
     this.setState({
       arrOmdb: dataOmdb.Search
     });
