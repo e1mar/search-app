@@ -62,21 +62,21 @@ class App extends React.Component {
         </div>
 
         <div className="movie">
-          <h2>Recent searches</h2>
-          <select onChange={this.handleChange}>
+          <h2 id="recent-search">Recent searches</h2>
+          <select id="dropdown" onChange={this.handleChange}>
             {this.state.recentSearch.map(recentSearch => {
               return <option value={recentSearch}> {recentSearch} </option>;
             })}
           </select>
-          <h3>Movies</h3>
+          <h3 id="movies-header">Movies</h3>
           {this.state.arrOmdb.map(movie => (
             <div id="movie" key={movie.imdbID}>
               <div>
-                <h1 id="movie-title">Title:</h1>{" "}
+                <h1 id="movie-title-header">Title:</h1>{" "}
                 <h2 id="movie-title">{movie.Title}</h2>
               </div>
               <div>
-                <h1 id="movie-year">Year:</h1>{" "}
+                <h1 id="movie-year-header">Year:</h1>{" "}
                 <h2 id="movie-year">{movie.Year}</h2>
               </div>
               <img id="movie-poster" src={movie.Poster} />

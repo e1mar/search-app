@@ -1,0 +1,70 @@
+body {
+  background: rgba(3, 34, 97, 0.774);
+  position: relative;
+}
+#frame {
+  background: #ebebe7;
+  width: 1000px;
+  border: solid 6px white;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 30px;
+}
+#searchBtn {
+  background-color: green;
+  border: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5%;
+  font-size: 13px;
+  color: #ebebe7;
+  position: relative;
+  left: 37%;
+  top: 50px;
+}
+#search {
+  color: grey;
+  position: relative;
+  width: 25%;
+  left: 37%;
+  top: 50px;
+}
+#movie {
+  border: 2px solid white;
+  border-radius: 3%;
+  position: relative;
+  margin: auto;
+  width: 800px;
+  color: rgba(3, 34, 97, 0.774);
+  padding: 14px;
+}
+#movie-year-header,
+#movie-title-header {
+  margin-left: 30%;
+  font-size: 17px;
+  margin-top: 10px;
+}
+#movie-title,
+#movie-year {
+  margin-left: 30%;
+  font-size: 25px;
+  margin-top: 10px;
+}
+#movie-poster {
+  margin-left: 30%;
+}
+#recent-search {
+  margin-top: 80px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: green;
+}
+#dropdown {
+  margin-left: 10px;
+}
+#movies-header {
+  text-align: center;
+  font-size: 25px;
+  background-color: green;
+  color: #ebebe7;
+}
