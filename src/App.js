@@ -5,7 +5,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       searchRes: "The Matrix",
-      arrOmdb: []
+      arrOmdb: [],
+      recentSearch: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,7 +30,8 @@ class App extends React.Component {
     console.log(arrInput);
 
     this.setState({
-      arrOmdb: dataOmdb.Search
+      arrOmdb: dataOmdb.Search,
+      recentSearch: arrInput
     });
   }
 
@@ -61,6 +63,11 @@ class App extends React.Component {
 
         <div className="movie">
           <h2>Recent searches</h2>
+          <select onChange={this.handleChange}>
+            {this.state.recentSearch.map(recentSearch => {
+              return <option value={recentSearch}> {recentSearch} </option>;
+            })}
+          </select>
           <h3>Movies</h3>
           {this.state.arrOmdb.map(movie => (
             <div id="movie" key={movie.imdbID}>
